@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "build": "leaf build",
+    "dev": "leaf dev",
+    "start": "leaf start"
+  },
+  "dependencies": {
+    "@leaf-web/core": "^0.2.9",
+    "color-blend": "^4.0.0"
+  },
+  "devDependencies": {
+    "@leaf-web/parser": "^0.2.8",
+    "@leaf-web/types": "^0.2.8",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  },
+  "packageManager": "yarn@3.2.3"
+}
