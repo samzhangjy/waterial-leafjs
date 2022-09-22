@@ -1,4 +1,4 @@
-import { LeafComponent } from "@leaf-web/core";
+import { LeafComponent } from '@leaf-web/core';
 declare class Button extends LeafComponent {
     static watchedProps: string[];
     constructor();

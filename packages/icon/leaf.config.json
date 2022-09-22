@@ -1,6 +1,5 @@
 {
   "entry": "./src/index.ts",
-  "entryHTML": "index.html",
   "outputDir": "./dist",
   "typescript": "./tsconfig.json",
   "formats": [

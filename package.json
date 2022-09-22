@@ -2,10 +2,12 @@
   "name": "@waterial/monorepo",
   "private": true,
   "scripts": {
-    "build": "leaf build",
-    "dev": "leaf dev",
-    "start": "leaf start",
-    "lint": "eslint . --fix"
+    "build:example": "leaf build",
+    "dev:example": "leaf dev",
+    "start:example": "leaf start",
+    "lint": "eslint . --fix",
+    "build": "yarn workspaces foreach --no-private --topological-dev run build",
+    "clean": "yarn workspaces foreach --no-private --topological-dev run clean"
   },
   "dependencies": {
     "@leaf-web/core": "^0.2.13",
@@ -14,14 +16,16 @@
     "@waterial/icon": "workspace:*"
   },
   "devDependencies": {
-    "@leaf-web/parser": "^0.2.11",
+    "@leaf-web/parser": "^0.2.14",
     "@leaf-web/types": "^0.2.8",
     "@typescript-eslint/eslint-plugin": "^5.38.0",
     "@typescript-eslint/parser": "^5.38.0",
     "eslint": "^8.23.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
     "tslib": "^2.4.0",
     "typescript": "^4.7.4"
   },

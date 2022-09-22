@@ -3,16 +3,20 @@
   "main": "./dist/es/bundle.min.js",
   "types": "./dist/es/src/index.d.ts",
   "scripts": {
-    "build": "leaf build",
-    "dev": "leaf dev",
-    "start": "leaf start"
+    "build:leaf": "leaf build",
+    "dev:leaf": "leaf dev",
+    "start:leaf": "leaf start",
+    "build": "run-s clean && run-p build:leaf",
+    "clean": "rimraf ./dist"
   },
   "dependencies": {
     "@leaf-web/core": "^0.2.13"
   },
   "devDependencies": {
-    "@leaf-web/parser": "^0.2.13",
+    "@leaf-web/parser": "^0.2.14",
     "@leaf-web/types": "^0.2.8",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
     "tslib": "^2.4.0",
     "typescript": "^4.7.4"
   }

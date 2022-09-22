@@ -1,4 +1,4 @@
-import { LeafComponent } from "@leaf-web/core";
+import { LeafComponent } from '@leaf-web/core';
 declare class Icon extends LeafComponent {
     static watchedProps: string[];
     render(): any;

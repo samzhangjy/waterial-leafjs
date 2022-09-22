@@ -1,5 +1,5 @@
-import { normal as blendRGBA } from "color-blend";
-import { interactionStates } from "./tokens";
+import { normal as blendRGBA } from 'color-blend';
+import { interactionStates } from './tokens';
 export const addAlpha = (color, opacity) => {
     const _opacity = Math.round(Math.min(Math.max(opacity !== null && opacity !== void 0 ? opacity : 1, 0), 1) * 255);
     return color + _opacity.toString(16).toUpperCase();
@@ -16,11 +16,11 @@ export const hexToRGB = (hex, alpha) => {
     return `rgba(${r}, ${g}, ${b}, 1)`;
 };
 export const parseRGBA = (rgba) => {
-    if (rgba.startsWith("rgba"))
-        rgba = rgba.replace("rgba", "");
+    if (rgba.startsWith('rgba'))
+        rgba = rgba.replace('rgba', '');
     else
-        rgba = rgba.replace("rgb", "");
-    const rgbaList = rgba.substring(1, rgba.length - 1).split(",");
+        rgba = rgba.replace('rgb', '');
+    const rgbaList = rgba.substring(1, rgba.length - 1).split(',');
     return {
         r: parseInt(rgbaList[0].trim()),
         g: parseInt(rgbaList[1].trim()),
@@ -31,15 +31,15 @@ export const parseRGBA = (rgba) => {
 export const blend = (colorA, colorB, ...otherColors) => {
     let rgbaA = { r: 0, g: 0, b: 0, a: 0 };
     let rgbaB = { r: 0, g: 0, b: 0, a: 0 };
-    if (colorA.startsWith("#"))
+    if (colorA.startsWith('#'))
         colorA = hexToRGB(colorA);
     rgbaA = parseRGBA(colorA);
-    if (colorB.startsWith("#"))
+    if (colorB.startsWith('#'))
         colorB = hexToRGB(colorB);
     rgbaB = parseRGBA(colorB);
     let result = blendRGBA(rgbaA, rgbaB);
     otherColors.forEach((color) => {
-        if (color.startsWith("#"))
+        if (color.startsWith('#'))
             color = hexToRGB(color);
         const currentRGB = parseRGBA(color);
         result = blendRGBA(result, currentRGB);
@@ -56,7 +56,7 @@ export const generateInteractionStates = (baseColor) => {
 };
 export const lightenDarkenColor = (col, amt) => {
     let usePound = false;
-    if (col[0] == "#") {
+    if (col[0] == '#') {
         col = col.slice(1);
         usePound = true;
     }
@@ -76,12 +76,12 @@ export const lightenDarkenColor = (col, amt) => {
         g = 255;
     else if (g < 0)
         g = 0;
-    return (usePound ? "#" : "") + (g | (b << 8) | (r << 16)).toString(16);
+    return (usePound ? '#' : '') + (g | (b << 8) | (r << 16)).toString(16);
 };
 export const generateFullSpec = (baseSpec, detailSpec, normalize = true) => {
     const fullSpec = Object.assign({}, baseSpec);
     for (const key in detailSpec) {
-        if (fullSpec[key] && fullSpec[key].trim().endsWith("!preserve"))
+        if (fullSpec[key] && fullSpec[key].trim().endsWith('!preserve'))
             continue;
         fullSpec[key] = detailSpec[key];
     }
@@ -90,17 +90,17 @@ export const generateFullSpec = (baseSpec, detailSpec, normalize = true) => {
     for (const key in fullSpec) {
         if (!fullSpec[key])
             continue;
-        fullSpec[key] = fullSpec[key].replace("!preserve", "");
+        fullSpec[key] = fullSpec[key].replace('!preserve', '');
     }
     return fullSpec;
 };
 export const combineLayers = (...layers) => {
     return layers
         .map((layer) => `linear-gradient(0deg, ${layer}, ${layer})`)
-        .join(",");
+        .join(',');
 };
 export const transformCSSKey = (key) => {
-    let result = "";
+    let result = '';
     for (let i = 0; i < key.length; i++) {
         if (key[i].toLowerCase() !== key[i]) {
             result += `-${key[i].toLowerCase()}`;
@@ -112,12 +112,12 @@ export const transformCSSKey = (key) => {
     return result;
 };
 export const normailzeInteractionState = (state) => {
-    if (state === "press")
-        state = "active";
-    if (state === "focus")
-        state = "focus:not(:active)";
-    if (state !== "disabled")
-        state += ":not(:disabled)";
+    if (state === 'press')
+        state = 'active';
+    if (state === 'focus')
+        state = 'focus:not(:active)';
+    if (state !== 'disabled')
+        state += ':not(:disabled)';
     return state;
 };
 //# sourceMappingURL=utils.js.map

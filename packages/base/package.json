@@ -3,14 +3,13 @@
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",
   "scripts": {
-    "build": "tsc --build",
+    "build": "run-s clean && run-p build:tsc",
+    "build:tsc": "tsc --build",
     "dev": "tsc -w",
-    "start": "leaf start"
+    "clean": "rimraf ./dist"
   },
   "dependencies": {
     "@leaf-web/core": "^0.2.9",
-    "@waterial/base": "workspace:*",
-    "@waterial/typography": "workspace:*",
     "color-blend": "^4.0.0"
   },
   "devDependencies": {
