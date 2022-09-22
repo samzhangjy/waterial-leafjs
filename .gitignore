@@ -1,6 +1,9 @@
 node_modules/
 .leaf/
 .vscode/
+/dist
+/**/index.html
+!/index.html
 
 # Yarn
 .pnp.*

@@ -7,7 +7,9 @@
     "jsx": "preserve",
     "target": "es6",
     "moduleResolution": "Node",
+    "outDir": "./dist",
+    "declaration": true
   },
-  "include": ["leaf.d.ts", "index.tsx"],
+  "include": ["./src/*"],
   "exclude": ["node_modules"]
 }

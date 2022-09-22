@@ -1,0 +1,14 @@
+{
+  "name": "@waterial/ripple",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "scripts": {
+    "build": "tsc --build",
+    "dev": "tsc --watch",
+    "start": "leaf start"
+  },
+  "devDependencies": {
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  }
+}

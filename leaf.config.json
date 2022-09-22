@@ -1,5 +1,5 @@
 {
-  "entry": "./src/index.tsx",
+  "entry": "./index.tsx",
   "entryHTML": "index.html",
   "outputDir": "./dist",
   "typescript": "./tsconfig.json"
