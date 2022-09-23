@@ -1,12 +1,4 @@
-import {
-  addAlpha,
-  blend,
-  generateFullSpec,
-  interactionStates,
-  lightTheme,
-  normailzeInteractionState,
-  transformCSSKey,
-} from '@waterial/base';
+import { addAlpha, generateFullSpec, lightTheme } from '@waterial/base';
 
 const buttonBase = {
   height: '40px',

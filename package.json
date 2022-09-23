@@ -7,7 +7,8 @@
     "start:example": "leaf start",
     "lint": "eslint . --fix",
     "build": "yarn workspaces foreach --no-private --topological-dev run build",
-    "clean": "yarn workspaces foreach --no-private --topological-dev run clean"
+    "clean": "yarn workspaces foreach --no-private --topological-dev run clean",
+    "release": "lerna publish"
   },
   "dependencies": {
     "@leaf-web/core": "^0.2.15",
