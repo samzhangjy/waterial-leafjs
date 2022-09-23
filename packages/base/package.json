@@ -2,6 +2,7 @@
   "name": "@waterial/base",
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",
+  "version": "0.0.0",
   "scripts": {
     "build": "run-s clean && run-p build:tsc",
     "build:tsc": "tsc --build",

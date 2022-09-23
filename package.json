@@ -20,6 +20,7 @@
   "devDependencies": {
     "@leaf-web/parser": "^0.2.14",
     "@leaf-web/types": "^0.2.8",
+    "@lerna-lite/cli": "^1.11.3",
     "@typescript-eslint/eslint-plugin": "^5.38.0",
     "@typescript-eslint/parser": "^5.38.0",
     "eslint": "^8.23.1",
