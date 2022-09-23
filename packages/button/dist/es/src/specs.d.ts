@@ -1020,5 +1020,4 @@ declare const specs: {
         };
     };
 };
-export declare const generateTargetCSS: <T extends Record<string, string>>(spec: T, state: string) => string;
 export default specs;

@@ -1,7 +1,7 @@
-import { LeafComponent, registerComponent } from '@leaf-web/core';
+import { css, LeafComponent, registerComponent } from '@leaf-web/core';
 import Fab from '@waterial/fab';
 import Button from '@waterial/button';
-import Icon from '@waterial/icon';
+import ExtendedFAB from '@waterial/extended-fab';
 
 class Home extends LeafComponent {
   render() {
@@ -11,9 +11,23 @@ class Home extends LeafComponent {
         <Button type="elevated" icon="add">
           Button
         </Button>
-        <Icon>add</Icon>
+        <div className="fab-container">
+          <ExtendedFAB icon="edit" color="tertiary">
+            Extended FAB
+          </ExtendedFAB>
+          <ExtendedFAB no-float>Extended</ExtendedFAB>
+        </div>
       </div>
     );
+  }
+
+  css() {
+    return css`
+      .fab-container {
+        position: relative;
+        height: 50vh;
+      }
+    `;
   }
 }
 

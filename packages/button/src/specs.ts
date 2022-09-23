@@ -271,47 +271,4 @@ const specs = {
   },
 };
 
-const CSSMapping: Record<string, string> = {
-  elevation: 'box-shadow',
-  textColor: 'color',
-};
-
-export const generateTargetCSS = <T extends Record<string, string>>(
-  spec: T,
-  state: string
-) => {
-  let generated = '';
-  let icons = '';
-  if (state === 'active') state = 'press';
-  for (const key in spec) {
-    if (!spec[key]) continue;
-    if (key === 'background' && !spec.stateLayer) {
-      generated += `background: ${spec[key]};`;
-      continue;
-    }
-    if (key === 'stateLayer') {
-      generated += `background: ${blend(
-        spec.background,
-        addAlpha(spec[key], interactionStates[state])
-      )};`;
-      continue;
-    }
-    if (key.startsWith('icon')) {
-      const actualKey = key.slice(4).charAt(0).toLowerCase() + key.slice(5);
-      icons += `.icon { ${transformCSSKey(actualKey)}: ${
-        spec[key]
-      } !important; }`;
-      continue;
-    }
-    if (key in CSSMapping) {
-      generated += `${CSSMapping[key]}: ${spec[key]};`;
-      continue;
-    }
-    generated += `${transformCSSKey(key)}: ${spec[key]};`;
-  }
-  if (state === 'hover') generated += 'cursor: pointer;';
-  if (state === 'disabled') generated += 'cursor: not-allowed;';
-  return `.button:${normailzeInteractionState(state)} {${generated}}${icons}`;
-};
-
 export default specs;

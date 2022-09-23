@@ -11,3 +11,7 @@ export {
   parseRGBA,
   transformCSSKey,
 } from './utils';
+export {
+  generateTargetCSS as generateButtonCSS,
+  generateColorCollectionFromBase as generateButtonColorsFromBase,
+} from './helpers/button';

@@ -4,7 +4,8 @@ import { addAlpha } from '@waterial/base';
 import Icon from '@waterial/icon';
 import createRipple from '@waterial/ripple';
 import { Label } from '@waterial/typography';
-import specs, { generateTargetCSS } from './specs';
+import specs from './specs';
+import { generateButtonCSS } from '@waterial/base';
 
 class Button extends LeafComponent {
   static watchedProps = ['type', 'disabled', 'icon'];
@@ -50,7 +51,7 @@ class Button extends LeafComponent {
     if (!currentSpec) return css``;
     return css`
       ${Object.keys(currentSpec)
-        .map((state) => generateTargetCSS(currentSpec[state], state))
+        .map((state) => generateButtonCSS(currentSpec[state], state))
         .join('')}
     `;
   }

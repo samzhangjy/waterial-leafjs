@@ -1,0 +1,20 @@
+declare const specs: Record<string, Record<string, {
+    position: string;
+    overflow: string;
+    background: string;
+    textColor: string;
+    padding: string;
+    elevation: string;
+    border: string;
+    borderRadius: string;
+    stateLayer: string;
+    transition: string;
+    iconSize: string;
+    height: string;
+    minWidth: string;
+    iconMarginRight: string;
+    floatPosition: string;
+    floatBottom: string;
+    floatRight: string;
+}>>;
+export default specs;

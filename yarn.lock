@@ -1398,7 +1398,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@leaf-web/core@npm:0.2.13, @leaf-web/core@npm:^0.2.13":
+"@leaf-web/core@npm:0.2.13":
   version: 0.2.13
   resolution: "@leaf-web/core@npm:0.2.13"
   checksum: 0c4f77d3f25aec22d0bf92916dfa4e79db96b53378af8a87eebd9089c5b27a8acf703061082016a7bc010308708cbe4d0353370da19499e50397f20b29501fa7
@@ -1412,10 +1412,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@leaf-web/core@npm:^0.2.9":
-  version: 0.2.9
-  resolution: "@leaf-web/core@npm:0.2.9"
-  checksum: c7586e0bce2e1573de64a0f77580347b7f9c31ded25ca52cf9850a1aaee3b625c552bb9c7d7c07cfb97d3d49926d4acb69d8f1f3a7062e38f226e0fc1ffc3f21
+"@leaf-web/core@npm:^0.2.15":
+  version: 0.2.15
+  resolution: "@leaf-web/core@npm:0.2.15"
+  checksum: c0aac437d5d0d14308f292ec988106a90021f961359ef6535ee2f222f83335dca6416419b1065eecf280c0a8242461fe8102981277aa6c29b6cf4ee3efc10875
   languageName: node
   linkType: hard
 
@@ -1881,10 +1881,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@waterial/base@workspace:packages/base"
   dependencies:
-    "@leaf-web/core": ^0.2.9
     "@leaf-web/parser": ^0.2.8
     "@leaf-web/types": ^0.2.8
     color-blend: ^4.0.0
+    npm-run-all: ^4.1.5
+    rimraf: ^3.0.2
     tslib: ^2.4.0
     typescript: ^4.7.4
   languageName: unknown
@@ -1894,7 +1895,25 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@waterial/button@workspace:packages/button"
   dependencies:
-    "@leaf-web/core": ^0.2.13
+    "@leaf-web/core": ^0.2.15
+    "@leaf-web/parser": ^0.2.14
+    "@leaf-web/types": ^0.2.8
+    "@waterial/base": "workspace:*"
+    "@waterial/icon": "workspace:*"
+    "@waterial/ripple": "workspace:*"
+    "@waterial/typography": "workspace:*"
+    npm-run-all: ^4.1.5
+    rimraf: ^3.0.2
+    tslib: ^2.4.0
+    typescript: ^4.7.4
+  languageName: unknown
+  linkType: soft
+
+"@waterial/extended-fab@workspace:*, @waterial/extended-fab@workspace:packages/extended-fab":
+  version: 0.0.0-use.local
+  resolution: "@waterial/extended-fab@workspace:packages/extended-fab"
+  dependencies:
+    "@leaf-web/core": ^0.2.15
     "@leaf-web/parser": ^0.2.14
     "@leaf-web/types": ^0.2.8
     "@waterial/base": "workspace:*"
@@ -1912,7 +1931,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@waterial/fab@workspace:packages/fab"
   dependencies:
-    "@leaf-web/core": ^0.2.13
+    "@leaf-web/core": ^0.2.15
     "@leaf-web/parser": ^0.2.14
     "@leaf-web/types": ^0.2.8
     "@waterial/base": "workspace:*"
@@ -1930,7 +1949,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@waterial/icon@workspace:packages/icon"
   dependencies:
-    "@leaf-web/core": ^0.2.13
+    "@leaf-web/core": ^0.2.15
     "@leaf-web/parser": ^0.2.14
     "@leaf-web/types": ^0.2.8
     npm-run-all: ^4.1.5
@@ -1944,14 +1963,16 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@waterial/monorepo@workspace:."
   dependencies:
-    "@leaf-web/core": ^0.2.13
+    "@leaf-web/core": ^0.2.15
     "@leaf-web/parser": ^0.2.14
     "@leaf-web/types": ^0.2.8
     "@typescript-eslint/eslint-plugin": ^5.38.0
     "@typescript-eslint/parser": ^5.38.0
     "@waterial/button": "workspace:*"
+    "@waterial/extended-fab": "workspace:*"
     "@waterial/fab": "workspace:*"
     "@waterial/icon": "workspace:*"
+    "@waterial/ripple": "workspace:*"
     eslint: ^8.23.1
     eslint-config-prettier: ^8.5.0
     eslint-plugin-prettier: ^4.2.1
@@ -1978,7 +1999,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@waterial/typography@workspace:packages/typography"
   dependencies:
-    "@leaf-web/core": ^0.2.13
+    "@leaf-web/core": ^0.2.15
     "@leaf-web/parser": ^0.2.14
     "@leaf-web/types": ^0.2.8
     "@waterial/base": "workspace:*"

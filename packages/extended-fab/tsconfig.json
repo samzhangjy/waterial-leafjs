@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "baseUrl": ".",
+    "sourceMap": true,
+    "allowJs": false,
+    "jsx": "preserve",
+    "target": "es6",
+    "moduleResolution": "Node",
+    "declaration": true,
+    "outDir": "."
+  },
+  "include": ["leaf.d.ts", "./src/*"],
+  "exclude": ["node_modules"]
+}

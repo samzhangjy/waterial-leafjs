@@ -25,15 +25,18 @@ export const createRipple = (
     container.appendChild(styleSheet);
   }
 
+  const rect = container.getBoundingClientRect();
+
   const style: Partial<CSSStyleDeclaration> = {
     width: (circle.style.height = `${diameter}px`),
-    left: `${e.clientX - (container.offsetLeft + radius)}px`,
-    top: `${e.clientY - (container.offsetTop + radius)}px`,
+    left: `${e.pageX - window.scrollX - (rect.left + radius)}px`,
+    top: `${e.pageY - window.scrollY - (rect.top + radius)}px`,
     position: 'absolute',
     borderRadius: '50%',
     transform: 'scale(0)',
     animation: `ripple ${animationTime}ms linear`,
     background: color,
+    pointerEvents: 'none',
   };
 
   for (const key in style) {

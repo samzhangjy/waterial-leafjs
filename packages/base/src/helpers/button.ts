@@ -5,16 +5,19 @@ import {
   interactionStates,
   normailzeInteractionState,
   transformCSSKey,
-} from '@waterial/base';
+} from '../index';
 
 const CSSMapping: Record<string, string> = {
   textColor: 'color',
   elevation: 'box-shadow',
 };
 
+const floatedProperties: string[] = ['position', 'right', 'bottom'];
+
 export const generateTargetCSS = <T extends Record<string, string>>(
   spec: T,
-  state: string
+  state: string,
+  isFloated = false
 ) => {
   let generated = '';
   let icons = '';
@@ -32,7 +35,6 @@ export const generateTargetCSS = <T extends Record<string, string>>(
       )};`;
       continue;
     }
-    // if (key === "iconSize") continue;
     if (key.startsWith('icon')) {
       const actualKey = key.slice(4).charAt(0).toLowerCase() + key.slice(5);
       icons += `.icon { ${transformCSSKey(actualKey)}: ${
@@ -42,6 +44,13 @@ export const generateTargetCSS = <T extends Record<string, string>>(
     }
     if (key in CSSMapping) {
       generated += `${CSSMapping[key]}: ${spec[key]};`;
+      continue;
+    }
+    if (key in floatedProperties && !isFloated) continue;
+    if (key.startsWith('float') && isFloated) {
+      generated += `${key.slice(5).charAt(0).toLowerCase() + key.slice(6)}: ${
+        spec[key]
+      };`;
       continue;
     }
     generated += `${transformCSSKey(key)}: ${spec[key]};`;

@@ -18,14 +18,16 @@ class Icon extends LeafComponent {
   css() {
     return `
       .icon {
-        vertical-align: top;
         display: inline;
-        position: relative;
+        vertical-align: text-top;
         ${
+          // a real hacky way to center the icon
           this.props['with-text']
-            ? `top: calc(${this.props.size} * 0.115) !important;`
+            ? `margin-top: calc(-${this.props.size} * ${Math.ceil(
+                parseInt(this.props.size) / 18
+              )} * 0.115)`
             : ''
-        }
+        };
         font-size: ${this.props.size} !important;
       }
     `;

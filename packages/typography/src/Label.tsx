@@ -27,7 +27,7 @@ class Label extends LeafComponent {
         font-style: ${currentSpec.style};
         letter-spacing: ${currentSpec.letterSpacing};
         line-height: ${currentSpec.lineHeight};
-        ${this.props.inline ? 'display: inline;' : 'display: block'};
+        ${this.props.inline ? 'display: inline' : 'display: block'};
       }
     `;
   }

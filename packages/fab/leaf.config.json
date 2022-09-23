@@ -6,7 +6,12 @@
   "formats": [
     {
       "format": "es",
-      "external": ["@leaf-web/core", "@waterial/base", "@waterial/icon"]
+      "external": [
+        "@leaf-web/core",
+        "@waterial/base",
+        "@waterial/icon",
+        "@waterial/ripple"
+      ]
     },
     "iife"
   ]

@@ -10,10 +10,12 @@
     "clean": "yarn workspaces foreach --no-private --topological-dev run clean"
   },
   "dependencies": {
-    "@leaf-web/core": "^0.2.13",
+    "@leaf-web/core": "^0.2.15",
     "@waterial/button": "workspace:*",
+    "@waterial/extended-fab": "workspace:*",
     "@waterial/fab": "workspace:*",
-    "@waterial/icon": "workspace:*"
+    "@waterial/icon": "workspace:*",
+    "@waterial/ripple": "workspace:*"
   },
   "devDependencies": {
     "@leaf-web/parser": "^0.2.14",

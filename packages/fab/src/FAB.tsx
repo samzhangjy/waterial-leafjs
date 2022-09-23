@@ -3,11 +3,11 @@ import { interactionStates } from '@waterial/base';
 import { addAlpha } from '@waterial/base';
 import Icon from '@waterial/icon';
 import createRipple from '@waterial/ripple';
-import { generateTargetCSS } from './helper';
+import { generateButtonCSS } from '@waterial/base';
 import specs from './specs';
 
 class Fab extends LeafComponent {
-  static watchedProps = ['type', 'disabled', 'color'];
+  static watchedProps = ['type', 'disabled', 'color', 'no-float'];
 
   constructor() {
     super();
@@ -52,7 +52,9 @@ class Fab extends LeafComponent {
 
     return css`
       ${Object.keys(currentSpec)
-        .map((state) => generateTargetCSS(currentSpec[state], state))
+        .map((state) =>
+          generateButtonCSS(currentSpec[state], state, !this.props['no-float'])
+        )
         .join('')}
     `;
   }

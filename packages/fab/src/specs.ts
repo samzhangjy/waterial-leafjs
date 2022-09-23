@@ -1,5 +1,5 @@
 import { addAlpha, generateFullSpec, lightTheme } from '@waterial/base';
-import { generateColorCollectionFromBase } from './helper';
+import { generateButtonColorsFromBase } from '@waterial/base';
 
 const FABBase = {
   position: 'relative',
@@ -13,6 +13,9 @@ const FABBase = {
   stateLayer: 'rgba(0, 0, 0, 0)',
   transition: 'all 200ms',
   iconSize: '24px',
+  floatPosition: 'relative',
+  floatBottom: '0px',
+  floatRight: '0px',
 };
 
 const defaultColors = {
@@ -22,7 +25,7 @@ const defaultColors = {
     textColor: lightTheme.colors.onPrimaryContainer,
   },
   surface: {
-    background: lightTheme.colors.surface,
+    background: lightTheme.surface[3],
     stateLayer: lightTheme.colors.primary,
     textColor: lightTheme.colors.primary,
   },
@@ -48,6 +51,9 @@ const defaultEnabled = generateFullSpec(FABBase, {
   stateLayer: lightTheme.colors.onPrimaryContainer,
   textColor: lightTheme.colors.onPrimaryContainer,
   iconSize: '24px',
+  floatPosition: 'absolute',
+  floatBottom: '16px',
+  floatRight: '16px',
 });
 
 const defaultHover = generateFullSpec(defaultEnabled, {
@@ -79,7 +85,7 @@ const smallColors = {
     textColor: lightTheme.colors.onPrimaryContainer,
   },
   surface: {
-    background: lightTheme.colors.surface,
+    background: lightTheme.surface[3],
     stateLayer: lightTheme.colors.primary,
     textColor: lightTheme.colors.primary,
   },
@@ -134,7 +140,7 @@ const largeColors = {
     textColor: lightTheme.colors.onPrimaryContainer,
   },
   surface: {
-    background: lightTheme.colors.surface,
+    background: lightTheme.surface[3],
     stateLayer: lightTheme.colors.primary,
     textColor: lightTheme.colors.primary,
   },
@@ -183,7 +189,7 @@ const largeDisabled = generateFullSpec(
 );
 
 const specs = {
-  default: generateColorCollectionFromBase(
+  default: generateButtonColorsFromBase(
     {
       enabled: defaultEnabled,
       hover: defaultHover,
@@ -193,7 +199,7 @@ const specs = {
     },
     defaultColors
   ),
-  small: generateColorCollectionFromBase(
+  small: generateButtonColorsFromBase(
     {
       enabled: smallEnabled,
       hover: smallHover,
@@ -203,7 +209,7 @@ const specs = {
     },
     smallColors
   ),
-  large: generateColorCollectionFromBase(
+  large: generateButtonColorsFromBase(
     {
       enabled: largeEnabled,
       hover: largeHover,

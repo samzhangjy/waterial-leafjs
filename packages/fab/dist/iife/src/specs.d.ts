@@ -11,6 +11,9 @@ declare const specs: {
         stateLayer: string;
         transition: string;
         iconSize: string;
+        floatPosition: string;
+        floatBottom: string;
+        floatRight: string;
     }>>;
     small: Record<string, Record<string, {
         position: string;
@@ -24,6 +27,9 @@ declare const specs: {
         stateLayer: string;
         transition: string;
         iconSize: string;
+        floatPosition: string;
+        floatBottom: string;
+        floatRight: string;
     }>>;
     large: Record<string, Record<string, {
         position: string;
@@ -37,6 +43,9 @@ declare const specs: {
         stateLayer: string;
         transition: string;
         iconSize: string;
+        floatPosition: string;
+        floatBottom: string;
+        floatRight: string;
     }>>;
 };
 export default specs;
