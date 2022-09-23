@@ -2,7 +2,7 @@
   "name": "@waterial/icon",
   "main": "./dist/es/bundle.min.js",
   "types": "./dist/es/src/index.d.ts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "build:leaf": "leaf build",
     "dev:leaf": "leaf dev",

@@ -2,7 +2,7 @@
   "name": "@waterial/typography",
   "main": "./dist/es/bundle.min.js",
   "types": "./dist/es/src/index.d.ts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "build:leaf": "leaf build",
     "dev:leaf": "leaf dev",
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@leaf-web/core": "^0.2.15",
-    "@waterial/base": "0.0.1"
+    "@waterial/base": "^0.0.2"
   },
   "devDependencies": {
     "@leaf-web/parser": "^0.2.14",
