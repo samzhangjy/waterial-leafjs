@@ -1,4 +1,4 @@
-declare const specs: {
+export declare const calculateSpec: () => {
     default: Record<string, Record<string, {
         position: string;
         overflow: string;
@@ -14,6 +14,7 @@ declare const specs: {
         floatPosition: string;
         floatBottom: string;
         floatRight: string;
+        zIndex: string;
     }>>;
     small: Record<string, Record<string, {
         position: string;
@@ -30,6 +31,7 @@ declare const specs: {
         floatPosition: string;
         floatBottom: string;
         floatRight: string;
+        zIndex: string;
     }>>;
     large: Record<string, Record<string, {
         position: string;
@@ -46,6 +48,6 @@ declare const specs: {
         floatPosition: string;
         floatBottom: string;
         floatRight: string;
+        zIndex: string;
     }>>;
 };
-export default specs;

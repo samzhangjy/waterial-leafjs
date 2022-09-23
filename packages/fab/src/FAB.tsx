@@ -4,13 +4,19 @@ import { addAlpha } from '@waterial/base';
 import Icon from '@waterial/icon';
 import createRipple from '@waterial/ripple';
 import { generateButtonCSS } from '@waterial/base';
-import specs from './specs';
+import { calculateSpec } from './specs';
 
 class Fab extends LeafComponent {
   static watchedProps = ['type', 'disabled', 'color', 'no-float'];
+  specs = calculateSpec();
 
   constructor() {
     super();
+
+    window.addEventListener('waterial-theme-change', () => {
+      this.specs = calculateSpec();
+      this.rerender();
+    });
   }
 
   render() {
@@ -24,7 +30,7 @@ class Fab extends LeafComponent {
           createRipple(
             e,
             addAlpha(
-              specs[currentType][color]?.active?.stateLayer,
+              this.specs[currentType][color]?.active?.stateLayer,
               interactionStates.press
             ),
             400
@@ -36,7 +42,7 @@ class Fab extends LeafComponent {
       >
         <Icon
           class="icon"
-          size={specs[currentType][color].enabled.iconSize ?? '24px'}
+          size={this.specs[currentType][color].enabled.iconSize ?? '24px'}
         >
           <slot></slot>
         </Icon>
@@ -46,7 +52,7 @@ class Fab extends LeafComponent {
 
   css() {
     const currentColor = this.props.color ?? 'primary';
-    const currentSpec = specs[this.props.type ?? 'default'][currentColor];
+    const currentSpec = this.specs[this.props.type ?? 'default'][currentColor];
 
     if (!currentSpec) return css``;
 

@@ -1,4 +1,4 @@
-declare const specs: {
+export declare const calculateSpec: () => {
     elevated: {
         enabled: {
             height: string;
@@ -1020,4 +1020,3 @@ declare const specs: {
         };
     };
 };
-export default specs;

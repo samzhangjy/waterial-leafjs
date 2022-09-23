@@ -2281,7 +2281,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@waterial/base@workspace:*, @waterial/base@workspace:packages/base":
+"@waterial/base@0.0.1, @waterial/base@workspace:*, @waterial/base@workspace:packages/base":
   version: 0.0.0-use.local
   resolution: "@waterial/base@workspace:packages/base"
   dependencies:
@@ -2302,10 +2302,25 @@ __metadata:
     "@leaf-web/core": ^0.2.15
     "@leaf-web/parser": ^0.2.14
     "@leaf-web/types": ^0.2.8
-    "@waterial/base": "workspace:*"
-    "@waterial/icon": "workspace:*"
-    "@waterial/ripple": "workspace:*"
-    "@waterial/typography": "workspace:*"
+    "@waterial/base": 0.0.1
+    "@waterial/icon": 0.0.1
+    "@waterial/ripple": 0.0.1
+    "@waterial/typography": 0.0.1
+    npm-run-all: ^4.1.5
+    rimraf: ^3.0.2
+    tslib: ^2.4.0
+    typescript: ^4.7.4
+  languageName: unknown
+  linkType: soft
+
+"@waterial/container@workspace:*, @waterial/container@workspace:packages/container":
+  version: 0.0.0-use.local
+  resolution: "@waterial/container@workspace:packages/container"
+  dependencies:
+    "@leaf-web/core": ^0.2.15
+    "@leaf-web/parser": ^0.2.14
+    "@leaf-web/types": ^0.2.8
+    "@waterial/base": 0.0.1
     npm-run-all: ^4.1.5
     rimraf: ^3.0.2
     tslib: ^2.4.0
@@ -2320,10 +2335,10 @@ __metadata:
     "@leaf-web/core": ^0.2.15
     "@leaf-web/parser": ^0.2.14
     "@leaf-web/types": ^0.2.8
-    "@waterial/base": "workspace:*"
-    "@waterial/icon": "workspace:*"
-    "@waterial/ripple": "workspace:*"
-    "@waterial/typography": "workspace:*"
+    "@waterial/base": 0.0.1
+    "@waterial/icon": 0.0.1
+    "@waterial/ripple": 0.0.1
+    "@waterial/typography": 0.0.1
     npm-run-all: ^4.1.5
     rimraf: ^3.0.2
     tslib: ^2.4.0
@@ -2338,10 +2353,10 @@ __metadata:
     "@leaf-web/core": ^0.2.15
     "@leaf-web/parser": ^0.2.14
     "@leaf-web/types": ^0.2.8
-    "@waterial/base": "workspace:*"
-    "@waterial/icon": "workspace:*"
-    "@waterial/ripple": "workspace:*"
-    "@waterial/typography": "workspace:*"
+    "@waterial/base": 0.0.1
+    "@waterial/icon": 0.0.1
+    "@waterial/ripple": 0.0.1
+    "@waterial/typography": 0.0.1
     npm-run-all: ^4.1.5
     rimraf: ^3.0.2
     tslib: ^2.4.0
@@ -2349,7 +2364,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@waterial/icon@workspace:*, @waterial/icon@workspace:packages/icon":
+"@waterial/icon@0.0.1, @waterial/icon@workspace:*, @waterial/icon@workspace:packages/icon":
   version: 0.0.0-use.local
   resolution: "@waterial/icon@workspace:packages/icon"
   dependencies:
@@ -2373,7 +2388,9 @@ __metadata:
     "@lerna-lite/cli": ^1.11.3
     "@typescript-eslint/eslint-plugin": ^5.38.0
     "@typescript-eslint/parser": ^5.38.0
+    "@waterial/base": "workspace:*"
     "@waterial/button": "workspace:*"
+    "@waterial/container": "workspace:*"
     "@waterial/extended-fab": "workspace:*"
     "@waterial/fab": "workspace:*"
     "@waterial/icon": "workspace:*"
@@ -2389,7 +2406,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@waterial/ripple@workspace:*, @waterial/ripple@workspace:packages/ripple":
+"@waterial/ripple@0.0.1, @waterial/ripple@workspace:*, @waterial/ripple@workspace:packages/ripple":
   version: 0.0.0-use.local
   resolution: "@waterial/ripple@workspace:packages/ripple"
   dependencies:
@@ -2400,14 +2417,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@waterial/typography@workspace:*, @waterial/typography@workspace:packages/typography":
+"@waterial/typography@0.0.1, @waterial/typography@workspace:packages/typography":
   version: 0.0.0-use.local
   resolution: "@waterial/typography@workspace:packages/typography"
   dependencies:
     "@leaf-web/core": ^0.2.15
     "@leaf-web/parser": ^0.2.14
     "@leaf-web/types": ^0.2.8
-    "@waterial/base": "workspace:*"
+    "@waterial/base": 0.0.1
     npm-run-all: ^4.1.5
     rimraf: ^3.0.2
     tslib: ^2.4.0

@@ -14,5 +14,6 @@
     "rimraf": "^3.0.2",
     "tslib": "^2.4.0",
     "typescript": "^4.7.4"
-  }
+  },
+  "gitHead": "f3601452f0a6fc07edc3a4edf1fb37e9e03ace27"
 }

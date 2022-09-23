@@ -1,0 +1,16 @@
+{
+  "entry": "./src/index.ts",
+  "entryHTML": "index.html",
+  "outputDir": "./dist",
+  "typescript": "./tsconfig.json",
+  "formats": [
+    {
+      "format": "es",
+      "external": [
+        "@leaf-web/core",
+        "@waterial/base"
+      ]
+    },
+    "iife"
+  ]
+}

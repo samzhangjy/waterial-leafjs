@@ -4,18 +4,25 @@ import { addAlpha } from '@waterial/base';
 import Icon from '@waterial/icon';
 import createRipple from '@waterial/ripple';
 import { Label } from '@waterial/typography';
-import specs from './specs';
+import { calculateSpec } from './specs';
 import { generateButtonCSS } from '@waterial/base';
 
 class Button extends LeafComponent {
   static watchedProps = ['type', 'disabled', 'icon'];
+  specs = calculateSpec();
 
   constructor() {
     super();
+
+    window.addEventListener('waterial-theme-change', () => {
+      this.specs = calculateSpec();
+      this.rerender();
+    });
   }
 
   render() {
     const currentType = this.props.type || 'filled';
+
     return (
       <button
         onClick={(e) => {
@@ -23,7 +30,7 @@ class Button extends LeafComponent {
           createRipple(
             e,
             addAlpha(
-              specs[currentType]?.active?.stateLayer,
+              this.specs[currentType]?.active?.stateLayer,
               interactionStates.press
             )
           );
@@ -47,8 +54,10 @@ class Button extends LeafComponent {
   css() {
     const currentColor = this.props.type || 'filled';
     const currentSpec =
-      specs[`${currentColor}${this.props.icon ? 'Icon' : ''}`];
+      this.specs[`${currentColor}${this.props.icon ? 'Icon' : ''}`];
+
     if (!currentSpec) return css``;
+
     return css`
       ${Object.keys(currentSpec)
         .map((state) => generateButtonCSS(currentSpec[state], state))

@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "@leaf-web/core": "^0.2.15",
+    "@waterial/base": "workspace:*",
     "@waterial/button": "workspace:*",
+    "@waterial/container": "workspace:*",
     "@waterial/extended-fab": "workspace:*",
     "@waterial/fab": "workspace:*",
     "@waterial/icon": "workspace:*",

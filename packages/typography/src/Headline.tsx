@@ -9,7 +9,7 @@ class Headline extends LeafComponent {
   }
 
   render() {
-    const Container = `${this.props.as || 'h1'}`;
+    const Container = `${this.props.as || 'h2'}`;
     return (
       <Container className={`headline-${this.props.size}`}>
         <slot></slot>

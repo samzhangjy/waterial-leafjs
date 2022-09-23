@@ -1,4 +1,4 @@
-declare const specs: Record<string, Record<string, {
+export declare const calculateSpec: () => Record<string, Record<string, {
     position: string;
     overflow: string;
     background: string;
@@ -16,5 +16,5 @@ declare const specs: Record<string, Record<string, {
     floatPosition: string;
     floatBottom: string;
     floatRight: string;
+    zIndex: string;
 }>>;
-export default specs;

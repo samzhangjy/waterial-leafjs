@@ -1,5 +1,5 @@
 import { normal as blendRGBA } from 'color-blend';
-import { interactionStates } from './tokens';
+import { interactionStates } from './theme';
 export const addAlpha = (color, opacity) => {
     const _opacity = Math.round(Math.min(Math.max(opacity !== null && opacity !== void 0 ? opacity : 1, 0), 1) * 255);
     return color + _opacity.toString(16).toUpperCase();

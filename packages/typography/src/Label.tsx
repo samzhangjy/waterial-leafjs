@@ -11,7 +11,6 @@ class Label extends LeafComponent {
   render() {
     return (
       <span className={`label-${this.props.size}`}>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" />
         <slot></slot>
       </span>
     );
