@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "baseUrl": ".",
+    "sourceMap": true,
+    "allowJs": false,
+    "jsx": "preserve",
+    "target": "es6",
+    "moduleResolution": "Node",
+    "declaration": true,
+    "outDir": "."
+  },
+  "include": ["leaf.d.ts", "./src/**/*.ts", "./src/**/*.tsx", "../../node_modules/@waterial/base/src/global.d.ts"],
+  "exclude": ["node_modules"]
+}

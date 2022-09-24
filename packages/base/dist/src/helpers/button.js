@@ -1,8 +1,5 @@
 import { addAlpha, blend, generateFullSpec, interactionStates, normailzeInteractionState, transformCSSKey, } from '../index';
-const CSSMapping = {
-    textColor: 'color',
-    elevation: 'box-shadow',
-};
+import { CSSMapping } from './theme';
 const floatedProperties = ['position', 'right', 'bottom'];
 export const generateTargetCSS = (spec, state, isFloated = false) => {
     let generated = '';

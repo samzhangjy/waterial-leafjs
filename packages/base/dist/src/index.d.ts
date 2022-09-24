@@ -3,4 +3,4 @@ export { addAlpha, blend, combineLayers, generateFullSpec, generateInteractionSt
 export { generateTargetCSS as generateButtonCSS, generateColorCollectionFromBase as generateButtonColorsFromBase, } from './helpers/button';
 export { default as typography } from './typography';
 export { default as ref } from './ref';
-export { initializeTheme, getCurrentThemeName } from './helpers/theme';
+export { initializeTheme, getCurrentThemeName, CSSMapping, } from './helpers/theme';

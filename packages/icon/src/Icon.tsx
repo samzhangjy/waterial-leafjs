@@ -1,7 +1,7 @@
 import { LeafComponent, registerComponent } from '@leaf-web/core';
 
 class Icon extends LeafComponent {
-  static watchedProps = ['size', 'class', 'with-text'];
+  static watchedProps = ['size', 'class', 'with-text', 'top'];
 
   render() {
     return (
@@ -23,9 +23,12 @@ class Icon extends LeafComponent {
         ${
           // a real hacky way to center the icon
           this.props['with-text']
-            ? `margin-top: calc(-${this.props.size} * ${Math.ceil(
-                parseInt(this.props.size) / 18
-              )} * 0.115)`
+            ? `margin-top: ${
+                this.props.top ??
+                `calc(-${this.props.size} * ${Math.ceil(
+                  parseInt(this.props.size) / 18
+                )} * 0.115)`
+              }`
             : ''
         };
         font-size: ${this.props.size} !important;

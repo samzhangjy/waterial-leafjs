@@ -18,7 +18,9 @@
     "@waterial/extended-fab": "workspace:*",
     "@waterial/fab": "workspace:*",
     "@waterial/icon": "workspace:*",
-    "@waterial/ripple": "workspace:*"
+    "@waterial/menu": "workspace:*",
+    "@waterial/ripple": "workspace:*",
+    "@waterial/typography": "workspace:*"
   },
   "devDependencies": {
     "@leaf-web/parser": "^0.2.14",

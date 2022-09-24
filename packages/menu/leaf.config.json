@@ -1,0 +1,18 @@
+{
+  "entry": "./src/index.ts",
+  "outputDir": "./dist",
+  "typescript": "./tsconfig.json",
+  "formats": [
+    {
+      "format": "es",
+      "external": [
+        "@leaf-web/core",
+        "@waterial/base",
+        "@waterial/icon",
+        "@waterial/typography",
+        "@waterial/ripple"
+      ]
+    },
+    "iife"
+  ]
+}

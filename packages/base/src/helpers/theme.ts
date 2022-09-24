@@ -9,6 +9,11 @@ declare global {
   }
 }
 
+export const CSSMapping: Record<string, string> = {
+  textColor: 'color',
+  elevation: 'box-shadow',
+};
+
 export const initializeTheme = () => {
   Object.defineProperty(window, 'waterialTheme', {
     get() {

@@ -6,11 +6,7 @@ import {
   normailzeInteractionState,
   transformCSSKey,
 } from '../index';
-
-const CSSMapping: Record<string, string> = {
-  textColor: 'color',
-  elevation: 'box-shadow',
-};
+import { CSSMapping } from './theme';
 
 const floatedProperties: string[] = ['position', 'right', 'bottom'];
 

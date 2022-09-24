@@ -1,5 +1,9 @@
 import { lightTheme, darkTheme } from '../theme';
 export let currentTheme = 'light';
+export const CSSMapping = {
+    textColor: 'color',
+    elevation: 'box-shadow',
+};
 export const initializeTheme = () => {
     Object.defineProperty(window, 'waterialTheme', {
         get() {

@@ -6,5 +6,6 @@ declare global {
         waterialTheme: ThemeConfig;
     }
 }
+export declare const CSSMapping: Record<string, string>;
 export declare const initializeTheme: () => void;
 export declare const getCurrentThemeName: () => "light" | "dark" | "custom";

@@ -4,11 +4,14 @@ import Button from '@waterial/button';
 import ExtendedFAB from '@waterial/extended-fab';
 import { initializeTheme } from '@waterial/base';
 import Container from '@waterial/container';
+import { Menu, MenuItem } from '@waterial/menu';
+import { Label } from '@waterial/typography';
 
 class Home extends LeafComponent {
   onMounted() {
     initializeTheme();
   }
+
   render() {
     return (
       <Container class="container">
@@ -16,12 +19,19 @@ class Home extends LeafComponent {
         <Button type="elevated" icon="add">
           Button
         </Button>
-        <div className="fab-container">
+        <Menu show>
+          {[...Array(3).keys()].map((val) => (
+            <MenuItem icon="add" trailing-icon="edit" submenu>
+              <MenuItem>Item {val + 1}</MenuItem>
+            </MenuItem>
+          ))}
+        </Menu>
+        {/* <div className="fab-container">
           <ExtendedFAB icon="edit" color="tertiary" no-float>
             Extended FAB
           </ExtendedFAB>
           <ExtendedFAB no-float>Extended</ExtendedFAB>
-        </div>
+        </div> */}
       </Container>
     );
   }
