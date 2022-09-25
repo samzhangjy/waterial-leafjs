@@ -13,6 +13,7 @@ export declare const calculateSpec: () => {
         stateLayer: string;
         position: string;
         transition: string;
+        overflow: string;
         display: string;
         textColor: string;
         leadingIconColor: string;
@@ -37,6 +38,7 @@ export declare const calculateSpec: () => {
         stateLayer: string;
         position: string;
         transition: string;
+        overflow: string;
         display: string;
         textColor: string;
         leadingIconColor: string;
@@ -61,6 +63,7 @@ export declare const calculateSpec: () => {
         stateLayer: string;
         position: string;
         transition: string;
+        overflow: string;
         display: string;
         textColor: string;
         leadingIconColor: string;
@@ -85,6 +88,7 @@ export declare const calculateSpec: () => {
         stateLayer: string;
         position: string;
         transition: string;
+        overflow: string;
         display: string;
         textColor: string;
         leadingIconColor: string;

@@ -16,6 +16,7 @@ declare class MenuItem extends LeafComponent {
             stateLayer: string;
             position: string;
             transition: string;
+            overflow: string;
             display: string;
             textColor: string;
             leadingIconColor: string;
@@ -40,6 +41,7 @@ declare class MenuItem extends LeafComponent {
             stateLayer: string;
             position: string;
             transition: string;
+            overflow: string;
             display: string;
             textColor: string;
             leadingIconColor: string;
@@ -64,6 +66,7 @@ declare class MenuItem extends LeafComponent {
             stateLayer: string;
             position: string;
             transition: string;
+            overflow: string;
             display: string;
             textColor: string;
             leadingIconColor: string;
@@ -88,6 +91,7 @@ declare class MenuItem extends LeafComponent {
             stateLayer: string;
             position: string;
             transition: string;
+            overflow: string;
             display: string;
             textColor: string;
             leadingIconColor: string;

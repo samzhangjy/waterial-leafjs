@@ -18,7 +18,7 @@ export const calculateSpec = () => {
     stateLayer: 'rgba(0, 0, 0, 0)',
     position: 'relative',
     transition: 'all 200ms',
-    // overflow: 'hidden',
+    overflow: 'hidden',
     display: 'block',
     textColor: 'auto',
     leadingIconColor: 'auto',

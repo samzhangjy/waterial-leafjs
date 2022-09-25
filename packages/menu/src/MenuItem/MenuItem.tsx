@@ -6,7 +6,6 @@ import createRipple from '@waterial/ripple';
 import { Label } from '@waterial/typography';
 import { calculateSpec } from './specs';
 import { generateMenuItemCSS } from './helper';
-import Menu from '../Menu';
 
 class MenuItem extends LeafComponent {
   static watchedProps = [
@@ -14,7 +13,7 @@ class MenuItem extends LeafComponent {
     'disabled',
     'icon',
     'trailing-icon',
-    'rtext',
+    'trailing-text',
     'submenu',
   ];
   specs = calculateSpec();
@@ -49,24 +48,18 @@ class MenuItem extends LeafComponent {
         <Icon class="leading-icon" size="24px" with-text top="-3px">
           {this.props.icon}
         </Icon>
-        {!this.props.submenu ? (
-          <Label
-            size="large"
-            class={this.props['trailing-icon'] ? 'trailing-margin' : ''}
-            inline
-          >
-            <slot></slot>
-          </Label>
-        ) : (
-          <Menu class="submenu" show>
-            <slot></slot>
-          </Menu>
-        )}
-        <Label size="small" inline>
-          {this.props.rtext}
+        <Label
+          size="large"
+          class={this.props['trailing-icon'] ? 'trailing-margin' : ''}
+          inline
+        >
+          <slot></slot>
+        </Label>
+        <Label size="large" class="trailing-icon" inline>
+          {this.props['trailing-text']}
         </Label>
         <Icon class="trailing-icon" size="24px" with-text top="-3px">
-          {!this.props.submenu ? this.props['trailing-icon'] : 'arrow_right'}
+          {this.props['trailing-icon']}
         </Icon>
       </button>
     );
@@ -77,17 +70,6 @@ class MenuItem extends LeafComponent {
       ${Object.keys(this.specs)
         .map((state) => generateMenuItemCSS(this.specs[state], state))
         .join('')}
-
-      .submenu {
-        display: none;
-        left: 100%;
-      }
-
-      .menu-item:hover .submenu {
-        display: block;
-        position: absolute;
-        top: 0px;
-      }
     `;
   }
 }
